@@ -55,6 +55,7 @@ plugins=(git)
 
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 source $ZSH/oh-my-zsh.sh
 
@@ -74,7 +75,7 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -84,9 +85,11 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias weather="curl wttr.in"
-
+alias sshmyserver="ssh root@67.205.185.197"
+alias sshmyserverv6="ssh root@2604:a880:400:d0::18aa:b001"
 # alias only for macOS
 if [[ $OSTYPE =~ darwin.* ]]
 then
     alias kindlepdf="/Applications/k2pdfopt"
+    alias matlab="/Applications/MATLAB_R2014b.app/bin/matlab"
 fi
